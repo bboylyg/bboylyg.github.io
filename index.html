@@ -32,14 +32,25 @@
       height: auto;
     }
 
-    .pub-thumb {
+    /* .pub-thumb {
       width: 220px;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.10);
       background: #fff;
       display: block;
-    }
+    } */
+
+    .pub-thumb {
+  width: 220px;
+  height: 140px;          /* 统一高度；想更扁就 130，更高就 150 */
+  object-fit: cover;      /* 裁剪填满 */
+  object-position: center;/* 居中裁剪 */
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+  background: #fff;
+  display: block;
+}
 
     .muted { color: #666; font-size: 13px; }
 
