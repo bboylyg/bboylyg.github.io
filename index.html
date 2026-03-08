@@ -2,12 +2,9 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
   <title>Yige Li</title>
-
   <meta name="author" content="Yige Li">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
   <style>
@@ -18,38 +15,76 @@
     heading { font-family: 'Lato', Verdana, Helvetica, sans-serif; font-size: 22px; }
     papertitle { font-family: 'Lato', Verdana, Helvetica, sans-serif; font-size: 14px; font-weight: 700; }
     name { font-family: 'Lato', Verdana, Helvetica, sans-serif; font-size: 32px; }
-    .profile { width: 100%; max-width: 1000px; margin-right: auto; margin-left: auto; border: 0px; border-spacing: 0px; border-collapse: separate; }
+
+    .container {
+      width: 100%;
+      max-width: 980px;
+      margin-right: auto;
+      margin-left: auto;
+      border: 0;
+      border-spacing: 0;
+      border-collapse: separate;
+    }
+
+    .profile-photo {
+      width: 100%;
+      max-width: 240px;
+      height: auto;
+    }
+
+    .pub-thumb {
+      width: 220px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+      background: #fff;
+      display: block;
+    }
+
+    .muted { color: #666; font-size: 13px; }
+
+    /* Collaboration notice box (Version B) */
+    .notice-box{
+      background:#fff7e8;
+      border-left:6px solid #f0b24a;
+      border-radius:10px;
+      padding:14px 16px;
+      margin: 10px 0 14px 0;
+      color:#333;
+      line-height:1.55;
+    }
   </style>
 </head>
 
 <body>
-  <table class="profile"><tbody>
+  <table class="container"><tbody>
 
     <!-- ===================== Header ===================== -->
     <tr>
       <td style="padding:20px;width:100%;vertical-align:middle">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
+            <td style="padding:2.5%;width:70%;vertical-align:middle">
+              <p style="text-align:left">
                 <name>Yige Li</name>
               </p>
-              <p style="text-align:center">
-                Postdoctoral Research Fellow<br>
+
+              <p style="text-align:left">
+                Research Scientist<br>
                 Singapore Management University
               </p>
 
-              <p style="text-align:center">
+              <p style="text-align:left">
                 <a href="mailto:yigeli@smu.edu.sg">Email</a> &nbsp;/&nbsp;
-                <a href="data/YigeLi-CV.pdf">CV</a> &nbsp;/&nbsp;
-                <a href="https://scholar.google.com/citations?user=h0cS2nQAAAAJ&hl=zh-CN">Scholar</a> &nbsp;/&nbsp;
-                <a href="https://github.com/bboylyg">GitHub</a>
+                <a href="https://scholar.google.com/citations?user=h0cS2nQAAAAJ&hl=zh-CN">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="https://github.com/bboylyg">GitHub</a> &nbsp;/&nbsp;
+                <a href="https://www.linkedin.com/in/yige-li-516b29362/">Linkedin</a>
               </p>
             </td>
 
-            <td style="padding:2.5%;width:37%;max-width:37%;vertical-align:middle">
+            <td style="padding:2.5%;width:30%;max-width:30%;vertical-align:middle;text-align:right">
               <a href="images/YigeLi.jpg">
-                <img style="width:100%;max-width:100%" alt="profile photo" src="images/YigeLi.jpg">
+                <img class="profile-photo" alt="profile photo" src="images/YigeLi.jpg">
               </a>
             </td>
           </tr>
@@ -57,13 +92,34 @@
       </td>
     </tr>
 
-    <!-- ===================== Research ===================== -->
+    <!-- ===================== About Me ===================== -->
     <tr>
       <td style="padding:20px;width:100%;vertical-align:middle">
-        <heading>Research</heading>
+        <heading>About Me</heading>
+
+        <div class="notice-box">
+          I welcome collaborations with researchers and students working on Trustworthy AI, LLM security, and agentic AI safety. Feel free to contact me for potential research discussions.
+        </div>
+
         <p>
-          My research centers on securing modern learning systems and large models, including backdoor behaviors, robust
-          training and evaluation, and controllable/safe deployment of LLMs and agentic systems.
+          I am a research fellow at the School of Computing and Information Systems at Singapore Management University supervised by Prof. Jun Sun.
+          I also work closely with Prof. Xingjun Ma at Fudan University.
+          I completed my Ph.D. at Xidian University under the supervision of Prof. Xixiang Lyu.
+  
+        </p>
+
+        <p>
+          I pursue research in <strong>Trustworthy AI</strong>, aiming to build <strong>secure</strong>, <strong>robust</strong>, and
+          <strong>interpretable</strong> systems that align with <strong>human values</strong> and <strong>cognition</strong>.
+          I’m especially interested in generative models (LLMs, diffusion models, and AI agents) and AI safety, and I seek simple yet insightful
+          solutions grounded in theory. Guided by the philosophy <em>"Everything should be made as simple as possible, but not simpler,"</em>
+          I approach research with both rigor and curiosity. Outside of work, I enjoy rock climbing 🧗 and swimming 🏊.
+        </p>
+
+        <p>
+          My research centers on securing modern learning systems and large models, including <strong>backdoor behaviors</strong>,
+          <strong>robust training and evaluation</strong>, and <strong>controllable/safe deployment</strong> of <strong>LLMs</strong> and
+          <strong>agentic systems</strong>.
         </p>
       </td>
     </tr>
@@ -71,140 +127,224 @@
     <!-- ===================== Publications ===================== -->
     <tr>
       <td style="padding:20px;width:100%;vertical-align:middle">
-        <heading>Publications</heading>
+        <heading>Selected Publications</heading>
+        <p class="muted">
+          † indicates corresponding author. For full publications, refer to my
+          <a href="https://scholar.google.com/citations?user=h0cS2nQAAAAJ&hl=zh-CN">Google Scholar page</a>.
+        </p>
       </td>
     </tr>
 
-    <!-- Jon Barron-style publications table; thumbnails removed (left column empty) -->
     <tr>
-      <td style="padding:0px 20px 20px 20px;width:100%;vertical-align:middle">
+      <td style="padding:0px 0px 10px 0px;width:100%;vertical-align:middle">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
+        <!-- Backdoor4Good -->
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img class="pub-thumb" src="images/pub_backdoor4good.png" alt="Backdoor4Good thumbnail">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2511.16709">
+                <papertitle>Backdoor4Good: Benchmarking Beneficial Uses of Backdoors in LLMs</papertitle>
+              </a>
+              <br>
+              <strong>Yige Li</strong>, Wei Zhao, Zhe Li, Nay Myat Min, Hanxun Huang, Xingjun Ma, Yu-Gang Jiang, Jun Sun
+              <br>
+              <em>arXiv</em>, 2026
+            </td>
+          </tr>
+          
           <!-- AutoBackdoor -->
           <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle"></td>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img class="pub-thumb" src="images/pub_autobackdoor.png" alt="AutoBackdoor thumbnail">
+            </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2511.16709">
                 <papertitle>AutoBackdoor: Automating Backdoor Attacks via LLM Agents</papertitle>
               </a>
               <br>
-              <strong>Yige Li</strong>
+              <strong>Yige Li</strong>, Zhe Li, Wei Zhao, Nay Myat Min, Hanxun Huang, Xingjun Ma, Jun Sun
               <br>
               <em>arXiv</em>, 2025
-              <br>
-              <a href="https://arxiv.org/abs/2511.16709">paper</a>
             </td>
           </tr>
 
           <!-- Shortcuts Everywhere and Nowhere -->
           <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle"></td>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img class="pub-thumb" src="images/pub_shortcuts.png" alt="Shortcuts thumbnail">
+            </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2401.15295">
                 <papertitle>Shortcuts Everywhere and Nowhere: Exploring Multi-Trigger Backdoor Attacks</papertitle>
               </a>
               <br>
-              <strong>Yige Li</strong>
+              <strong>Yige Li</strong>, Jiabo He, Hanxun Huang, Jun Sun, Xingjun Ma
               <br>
-              <em>arXiv</em>, 2024 &nbsp;|&nbsp; <em>IEEE TDSC</em> (Accepted)
-              <br>
-              <a href="https://arxiv.org/abs/2401.15295">paper</a>
+              <em>IEEE TDSC 2025</em>
             </td>
           </tr>
 
-          <!-- SOP -->
+           <!-- BackdoorLLM -->
           <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle"></td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://arxiv.org/abs/2508.01198">
-                <papertitle>Adaptive Content Restriction for Large Language Models via Suffix Optimization</papertitle>
-              </a>
-              <br>
-              <strong>Yige Li</strong>
-              <br>
-              <em>arXiv</em>, 2025
-              <br>
-              <a href="https://arxiv.org/abs/2508.01198">paper</a>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img class="pub-thumb" src="images/pub_backdoorllm.png" alt="BackdoorLLM thumbnail">
             </td>
-          </tr>
-
-          <!-- BackdoorLLM -->
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle"></td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2408.12798">
                 <papertitle>BackdoorLLM: A Comprehensive Benchmark for Backdoor Attacks and Defenses on Large Language Models</papertitle>
               </a>
               <br>
-              <strong>Yige Li</strong>
+              <strong>Yige Li</strong>, Hanxun Huang, Yunhan Zhao, Xingjun Ma, Jun Sun
               <br>
-              <em>NeurIPS</em>, 2025 &nbsp;|&nbsp; <strong>First Prize</strong> (SafetyBench Competition 2025)
+              <em>NeurIPS</em>, 2025 &nbsp;|&nbsp; <strong>First Prize in SafetyBench Competition</strong>
+            </td>
+          </tr>
+
+          <!-- SOP -->
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img class="pub-thumb" src="images/pub_sop.png" alt="Suffix Optimization thumbnail">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2508.01198">
+                <papertitle>Adaptive Content Restriction for Large Language Models via Suffix Optimization</papertitle>
+              </a>
               <br>
-              <a href="https://arxiv.org/abs/2408.12798">paper</a>
+              <strong>Yige Li</strong>, Peihai Jiang, Jun Sun, Peng Shu, Tianming Liu, Zhen Xiang
+              <br>
+              <em>arXiv</em>, 2025
             </td>
           </tr>
 
           <!-- Expose Before You Defend -->
           <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle"></td>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img class="pub-thumb" src="images/pub_ebyd.png" alt="EBYD thumbnail">
+            </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2410.19427">
-                <papertitle>Expose Before You Defend: Unifying and Enhancing Backdoor Defenses via Exposed Models</papertitle>
+                <papertitle>Expose Before You Defend: Better Backdoor Defense With Exposed Models</papertitle>
               </a>
               <br>
-              <strong>Yige Li</strong>
+              <strong>Yige Li</strong>, Hanxun Huang, Jiaming Zhang, Xingjun Ma, Yu-Gang Jiang
               <br>
-              <em>arXiv</em>, 2024
-              <br>
-              <a href="https://arxiv.org/abs/2410.19427">paper</a>
+              <em>arXiv</em>, 2025
             </td>
           </tr>
 
           <!-- RNP -->
           <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle"></td>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img class="pub-thumb" src="images/pub_rnp.png" alt="RNP thumbnail">
+            </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2305.14876">
                 <papertitle>Reconstructive Neuron Pruning for Backdoor Defense</papertitle>
               </a>
               <br>
-              <strong>Yige Li</strong>
+              <strong>Yige Li</strong>, Xixiang Lyu, Xingjun Ma, Nodens Koren, Lingjuan Lyu, Bo Li, Yu-Gang Jiang
               <br>
               <em>ICML</em>, 2023
-              <br>
-              <a href="https://arxiv.org/abs/2305.14876">paper</a>
             </td>
           </tr>
 
           <!-- Anti-Backdoor Learning -->
           <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle"></td>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img class="pub-thumb" src="images/pub_antibackdoor.png" alt="Anti-Backdoor thumbnail">
+            </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2110.11571">
                 <papertitle>Anti-Backdoor Learning: Training Clean Models on Poisoned Data</papertitle>
               </a>
               <br>
-              <strong>Yige Li</strong>
+              <strong>Yige Li</strong>, Xixiang Lyu, Nodens Koren, Lingjuan Lyu, Bo Li, Xingjun Ma
               <br>
               <em>NeurIPS</em>, 2021
-              <br>
-              <a href="https://arxiv.org/abs/2110.11571">paper</a>
             </td>
           </tr>
 
           <!-- NAD -->
           <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle"></td>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img class="pub-thumb" src="images/pub_nad.png" alt="NAD thumbnail">
+            </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2101.05930">
                 <papertitle>Neural Attention Distillation: Erasing Backdoor Triggers from Deep Neural Networks</papertitle>
               </a>
               <br>
-              <strong>Yige Li</strong>
+              <strong>Yige Li</strong>, Xixiang Lyu, Nodens Koren, Lingjuan Lyu, Bo Li, Xingjun Ma
               <br>
               <em>ICLR</em>, 2021
+            </td>
+          </tr>
+
+          <!-- CROW (corresponding) -->
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img class="pub-thumb" src="images/pub_crow.png" alt="CROW thumbnail">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/pdf/2411.12768?">
+                <papertitle>CROW: Eliminating Backdoors from Large Language Models via Internal Consistency Regularization</papertitle>
+              </a>
+              
               <br>
-              <a href="https://arxiv.org/abs/2101.05930">paper</a>
+              Nay Myat Min, Long H Pham, <strong>Yige Li†</strong>, Jun Sun
+              <br>
+              <em>ICML</em>, 2025
+            </td>
+          </tr>
+
+          <!-- Propaganda AI (corresponding) -->
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img class="pub-thumb" src="images/pub_propaganda_ai.png" alt="Propaganda AI thumbnail">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+            <a href="https://openreview.net/pdf?id=aAP5qqgzJh">
+                <papertitle>Propaganda AI: An Analysis of Semantic Divergence in Large Language Models</papertitle>
+              </a>
+              
+              <br>
+              Nay Myat Min, Long H Pham, <strong>Yige Li†</strong>, Jun Sun
+              <br>
+              <em>ICLR</em>, 2026
+            </td>
+          </tr>
+
+          <!-- Q-MLLM (corresponding) -->
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img class="pub-thumb" src="images/pub_qmllm.png" alt="Q-MLLM thumbnail">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+            <a href="https://www.ndss-symposium.org/wp-content/uploads/2026-s407-paper.pdf">
+              <papertitle>Q-MLLM: Vector Quantization for Robust Multimodal Large Language Model Security</papertitle>
+            </a> 
+              <br>
+              Wei Zhao, Zhe Li, <strong>Yige Li†</strong>, Jun Sun
+              <br>
+              <em>NDSS</em>, 2026
+            </td>
+          </tr>
+
+          <!-- X-Transfer Attacks (corresponding) -->
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img class="pub-thumb" src="images/pub_xtransfer.png" alt="X-Transfer thumbnail">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+            <a href="https://arxiv.org/pdf/2505.05528">
+              <papertitle>X-Transfer Attacks: Towards Super Transferable Adversarial Attacks on CLIP</papertitle>
+            </a> 
+              <br>
+              Hanxun Huang, Sarah Erfani, <strong>Yige Li†</strong>, Xingjun Ma, James Bailey
+              <br>
+              <em>ICML</em>, 2025
             </td>
           </tr>
 
@@ -217,7 +357,7 @@
       <td style="padding:20px;width:100%;vertical-align:middle">
         <heading>Award Honors</heading>
         <p>
-          We're honored to share that our <strong>BackdoorLLM</strong> has won the <strong>First Prize</strong> in the SafetyBench competition,
+          We're honored to share that our <strong>BackdoorLLM</strong> has won the <strong>First Prize (only three worldwide)</strong> in the <a href="https://www.mlsafety.org/safebench/winners">SafetyBench competition</a>,
           organized by the Center for AI Safety. Huge thanks to the organizers and reviewers for recognizing our work.
         </p>
       </td>
@@ -230,7 +370,7 @@
 
         <p><strong>Program Committee Member</strong></p>
         <p>
-          I’m very glad to share that I’ve been invited to serve as an <strong>Area Chair (AC) for ACL 2026</strong>, one of the top conferences in NLP.<br>
+          I’m very glad to share that I’ve been invited to serve as an Area Chair (AC) for ACL 2026, one of the top conferences in NLP.<br>
           <strong>Top Reviewer</strong>, NeurIPS 2025<br>
           Reviewer: ICLR, ICML, NeurIPS, CVPR, ICCV, AAAI, ACL, EMNLP
         </p>
